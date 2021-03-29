@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <title>Puzzle 3x3</title>
+</head>
+<body onload="setUp()">
+    <div class="main-container">
+        <div id="modal" class="hide">
+            <div id="header"><button id="closeBtn" onclick="hideModal()">x</button></div>
+            <h1 id="message">You won!</h1>
+        </div>
+        <h1>3x3 Puzzle</h1>
+        <h6>Arrastrar y soltar al área en blanco</h6>
+        <div class="button-container">            
+            <button class="button" onclick="primeroEnAnchura()">Primero en anchura</button>
+            <button class="button" onclick="primeroEnProfundidad()">Primero en Profundidad</button>
+            <button class="button" onclick="maximaPendiente()">Escalada con Máxima Pendiente</button>
+            <button class="button" onclick="primeroElMejor()">Primero el Mejor</button>
+            <button class="button" onclick="algoritmoA()">Algoritmo A*</button>
+        </div>
+        <div id="puzzle-container">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/puzzle.js"></script>
+    <script src="js/algoritmos.js"></script>
+</body>
+</html>
